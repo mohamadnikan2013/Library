@@ -6,15 +6,22 @@
 #define AP_TRANSACTION_H
 
 #include "Date.h"
+#include "Book.h"
+#include "Member.h"
 
 class Date;
 
+class Book;
+
+class Member;
+
 class Transaction {
     long trans_id;
-    long book_id;
-    long member_id;
+    Book *book;
+    Member *member;
     Date *issue_date;
     Date *due_date;
+    bool is_finished;
 };
 
 

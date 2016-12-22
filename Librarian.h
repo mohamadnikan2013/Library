@@ -10,6 +10,7 @@
 using namespace std;
 
 class Librarian {
+    long librarian_id;
     string name;
     long password;
 

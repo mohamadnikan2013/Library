@@ -8,6 +8,10 @@
 
 class Bill {
     double amount;
+
+    void pay_bill();
+
+    void update_bill(double money);
 };
 
 

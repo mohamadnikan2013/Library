@@ -6,11 +6,17 @@
 #define AP_WRITER_H
 
 #include <iostream>
+#include <set>
+#include "Book.h"
+
+class Book;
 
 using namespace std;
 
 class Writer {
+    long write_id;
     string name;
+    set<Book *> books;
 };
 
 

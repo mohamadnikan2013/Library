@@ -5,8 +5,11 @@
 #ifndef AP_RESEARCH_H
 #define AP_RESEARCH_H
 
+#include "Book.h"
 
-class Research {
+class Book;
+
+class Research: public Book {
 
 };
 

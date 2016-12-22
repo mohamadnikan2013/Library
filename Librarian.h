@@ -5,8 +5,13 @@
 #ifndef AP_LIBRARIAN_H
 #define AP_LIBRARIAN_H
 
+#include <iostream>
+
+using namespace std;
 
 class Librarian {
+    string name;
+    long password;
 
 };
 

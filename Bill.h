@@ -7,7 +7,7 @@
 
 
 class Bill {
-
+    double amount;
 };
 
 

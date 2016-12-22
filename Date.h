@@ -7,7 +7,8 @@
 
 
 class Date {
-
+    int month, day, year;
+    
 };
 
 

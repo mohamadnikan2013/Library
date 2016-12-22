@@ -5,8 +5,11 @@
 #ifndef AP_NOVEL_H
 #define AP_NOVEL_H
 
+#include "Book.h"
 
-class Novel {
+class Book;
+
+class Novel: public Book {
 
 };
 

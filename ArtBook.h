@@ -10,6 +10,8 @@
 class Book;
 
 class ArtBook : public Book {
+public:
+    ArtBook(const string &name, Writer *writer);
 
 };
 

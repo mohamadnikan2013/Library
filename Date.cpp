@@ -11,17 +11,21 @@ void Date::set_date(int month, int day, int year) {
 }
 
 void Date::display() {
-    cout << '\n' << name[month] << ' ' << day << "," << year << '\n';
+    cout << '\n' << name[month - 1] << ' ' << day << "," << year << '\n';
 }
 //return date from year begging
 
 int Date::days_so_far() {
     int total = 0;
-    for (int i=1; i < month; i++) total += length[i];
-    total += day;
+    total += (30 * (this->month - 1));
+    total += this->day;
     return (total);
 }
 
 int Date::sub(Date *date) {
-    return abs(this->days_so_far()- date->days_so_far());
+    return abs(this->days_so_far() - date->days_so_far());
 }
+
+const string Date::name[] = {"Jan", "Feb", "Mar", "Apr", "May", "June", "July", "Aug", "Sept", "Oct", "Nov",
+                             "Dec"};
+

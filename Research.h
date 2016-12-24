@@ -10,6 +10,9 @@
 class Book;
 
 class Research: public Book {
+    string field;
+public:
+    Research(const string &name, Writer *writer, const string &field);
 
 };
 

@@ -3,3 +3,5 @@
 //
 
 #include "ArtBook.h"
+
+ArtBook::ArtBook(const string &name, Writer *writer) : Book(name, writer) {}

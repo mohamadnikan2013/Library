@@ -10,6 +10,9 @@
 class Book;
 
 class Novel: public Book {
+    string genre;
+public:
+    Novel(const string &name, Writer *writer, const string genre);
 
 };
 

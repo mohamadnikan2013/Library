@@ -3,3 +3,5 @@
 //
 
 #include "ScienceBook.h"
+
+ScienceBook::ScienceBook(const string &name, Writer *writer, const string &Field) : Book(name, writer), Field(Field) {}

@@ -22,6 +22,22 @@ class Transaction {
     Date *issue_date;
     Date *due_date;
     bool is_finished;
+public:
+    Transaction(Book *book, Member *member, Date *issue_date);
+
+    long getTrans_id() const;
+
+    Book *getBook() const;
+
+    Member *getMember() const;
+
+    Date *getIssue_date() const;
+
+    Date *getDue_date() const;
+
+    bool isIs_finished() const;
+
+    void finished(Date *date);
 };
 
 

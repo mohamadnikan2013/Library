@@ -13,6 +13,9 @@ class Librarian {
     long librarian_id;
     string name;
     long password;
+    bool is_deleted;
+public:
+    Librarian(const string &name);
 
 };
 

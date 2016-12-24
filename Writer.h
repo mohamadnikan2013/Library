@@ -14,9 +14,20 @@ class Book;
 using namespace std;
 
 class Writer {
-    long write_id;
+    long writer_id;
+public:
+    long getWriter_id() const;
+
+public:
+    const string &getName() const;
+
+private:
     string name;
     set<Book *> books;
+public:
+    void show_written_books();
+
+    void add_book(Book *book);
 };
 
 

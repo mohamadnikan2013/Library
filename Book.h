@@ -36,7 +36,7 @@ public:
 
     bool isIs_availble() const;
 
-    vector<Transaction *> &getTransactions() const;
+    const vector<Transaction *> & getTransactions() const;
 
     Book(const string &name, Writer *writer);
 

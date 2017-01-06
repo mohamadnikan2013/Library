@@ -55,7 +55,7 @@ bool Book::isIs_availble() const {
     return is_availble;
 }
 
-vector<Transaction *> &Book::getTransactions() const {
+const vector<Transaction *> & Book::getTransactions() const {
     return transactions;
 }
 

@@ -46,8 +46,18 @@ void Member::return_book(double late) {
 Member::Member(const string &name, Date *date_of_membership) : name(name) {
     this->max_book_limit = 4;
     this->bill = new Bill();
+    this->number_of_book_issued = 0;
     this->date_of_membership = new Date;
     this->date_of_membership = date_of_membership;
     this->member_id = Library::Id_generator();
     this->is_deleted = false;
+}
+
+bool Member::isIs_deleted() const {
+    return is_deleted;
+}
+
+string Member::remove() {
+    double pay = this->bill->pay_bill();
+    return "He/She have to Pay " + to_string(pay) + "and return " + to_string(this->number_of_book_issued) + "books \n";
 }

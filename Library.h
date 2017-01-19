@@ -14,12 +14,12 @@
 #include "Date.h"
 #include "Transaction.h"
 #include "Member.h"
-
+#include "Writer.h"
 #include <random>
 
-class Date;
-
 class Book;
+
+class Date;
 
 class Librarian;
 
@@ -27,11 +27,15 @@ class Transaction;
 
 class Member;
 
+class Writer;
+
+
+
 using namespace std;
 
 class Library {
-    set<long> id_set;
     string name;
+    string password;
     map<long, Librarian *> librarians;
     map<long, Member *> members;
     map<long, Book *> books;
@@ -43,33 +47,39 @@ public:
 
     static long Id_generator();
 
-    void add_book(string book_name, Writer *writer);
+    long add_book(string book_name, long writer_id, string type, string description = "");
 
     void remove_book(long id);
 
-    void borrow_book(long borrowed_book_id, long member_id);
+    bool borrow_book(long borrowed_book_id, long member_id);
 
     void return_book(long borrowed_book_id);
 
     void show_books();
 
-    void show_borrowed_books();
+    double Pay(long user_id);
 
-    void show_available_books();
+    string show_borrowed_books();
 
-    void add_librarian(string name);
+    long add_writer(string name);
+
+    string show_available_books();
+
+    long add_librarian(string name, string password);
 
     void show_librarians();
 
     void remove_librarian();
 
-    void add_member(string name);
+    long add_member(string name);
 
-    void remove_member();
+    string remove_member(long id);
 
-    void show_members();
+    string show_members();
 
-    void find_book();
+    long find_book(string name);
+
+    bool login(long id, string password);
 
 };
 
